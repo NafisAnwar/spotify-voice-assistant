@@ -1,34 +1,29 @@
-# Spotify Voice Assistant (Speech → Spotify)
-
-Control Spotify with your voice. Say commands like “play blinding lights by the weeknd”, “pause”, “next”, “shuffle on”, “save this song”, or “switch to device living room tv”. Uses Google Speech Recognition for ASR and `pyttsx3` for local text‑to‑speech.
+# AI-Powered Music Voice Assistant (Spotify + Voice)
 
 
-> **Requires:** Spotify Premium and an **active device** signed into the same account (desktop, mobile, or web player).
+Control Spotify with your voice. Uses Google Speech Recognition (free tier) for ASR and `pyttsx3` for offline text‑to‑speech.
 
 
-## ✨ Features
-- Play/pause/next/previous
-- Play songs, artists, albums, or playlists by name
-- Volume control (up/down or exact value 0–100)
-- Shuffle & repeat toggles
-- “What song is this?” track info
-- Save (like) current track
-- List/switch Spotify devices
+## Features
+- Play/pause/resume/next/previous
+- "Play *<song>* by *<artist>*"; "Play album *<name>*"; "Play playlist *<name>*"
+- Device control: "switch to device *<name>*"
+- Volume control: "volume up/down", "set volume to *<0-100>*"
+- Shuffle/repeat: "shuffle on/off", "repeat on/off"
+- Track info: "what song is this?"
+- Library action: "like/save this song"
 
 
-## 🧩 Tech Stack
-- **Python 3.10+**
-- **Spotify Web API** via `spotipy` (OAuth PKCE; no client secret)
-- **SpeechRecognition** (Google Web Speech API)
-- **PyAudio** (mic capture)
-- **pyttsx3** (offline TTS)
-- **dotenv** for env config
+## Requirements
+- Python 3.10+
+- Spotify Premium account
+- An active Spotify device (desktop, phone, or web player)
+- Microphone connected to your computer
 
 
-## 📦 Install
+## Install
 ```bash
-git clone https://github.com/your-username/spotify-voice-assistant.git
-cd spotify-voice-assistant
-python -m venv .venv && . .venv/bin/activate # Windows: .venv\Scripts\activate
+# 1) Clone repo and enter it
 pip install -U pip
+python -m venv .venv && . .venv/bin/activate # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
